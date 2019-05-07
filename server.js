@@ -13,7 +13,15 @@ app.get('/', function(req, res) {
 
 app.post('/upload', function(req, res) {
     //console.log('req.body', req.body)
-    util.returnData(req.body);
+    if(!util.returnData(req.body)) {
+        return res.sendStatus(400)
+    } else {
+        //console.log(util.returnData(req.body))
+        // res.derirect('/');
+        res.send('<div>' + util.returnData(req.body) + '</div>')
+        
+        res.end();
+    }
 })
 
 app.listen(3000, () => {
