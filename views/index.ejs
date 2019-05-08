@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <form action="/upload" method="POST" enctype="text/plain" id="formJSON">
+        <textarea name="inputJSON" rows="10" cols="70"></textarea>
+        <input type="submit"  value="Submit">
+    </form>
+    <div id='lastCSV'>
+        <textarea name="csv" rows="10" cols="70" readonly><%= csv %></textarea>
+    </div>
+    <form download action="/download" method="GET" id="download">
+        <input type="submit" value="Download">
+    </form>
+</body>
+<script src="../client/app.js"></script>
+</html>
+

@@ -3,7 +3,6 @@ let util = module.exports
 
 
 util.returnData = (str) => {
-    console.log(str)
     let newStr = util.trim(str)
     let rowArr = util.createRows(util.parse(newStr));
     let csvFile = util.createCSV(rowArr);
